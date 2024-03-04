@@ -1,0 +1,211 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{3812fbe7-0037-4921-9681-2327b11574bd}</ProjectGuid>
+    <MainSource>kassa_sharedsourceTest.dpr</MainSource>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <DCC_DCCCompiler>DCC32</DCC_DCCCompiler>
+    <DCC_DependencyCheckOutputName>kassa_sharedsourceTest.exe</DCC_DependencyCheckOutputName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Version>7.0</Version>
+    <DCC_DebugInformation>False</DCC_DebugInformation>
+    <DCC_LocalDebugSymbols>False</DCC_LocalDebugSymbols>
+    <DCC_Optimize>False</DCC_Optimize>
+    <DCC_SymbolReferenceInfo>0</DCC_SymbolReferenceInfo>
+    <DCC_MapFile>3</DCC_MapFile>
+    <DCC_Define>DEBUG;EUREKALOG;EUREKALOG_VER6;RELEASE</DCC_Define>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <Version>7.0</Version>
+    <DCC_Optimize>False</DCC_Optimize>
+    <DCC_MapFile>3</DCC_MapFile>
+    <DCC_Define>DEBUG;DEBUG;EUREKALOG;EUREKALOG_VER7</DCC_Define>
+    <DCC_UnitSearchPath>;$(BDS)\Source\DUnit\src</DCC_UnitSearchPath>
+    <DCC_ResourcePath>;$(BDS)\Source\DUnit\src</DCC_ResourcePath>
+    <DCC_ObjPath>;$(BDS)\Source\DUnit\src</DCC_ObjPath>
+    <DCC_IncludePath>;$(BDS)\Source\DUnit\src</DCC_IncludePath>
+    <DCC_GenerateStackFrames>True</DCC_GenerateStackFrames>
+  </PropertyGroup>
+  <ProjectExtensions>
+    <Borland.Personality>Delphi.Personality</Borland.Personality>
+    <Borland.ProjectType />
+    <BorlandProject>
+<BorlandProject><Delphi.Personality><Parameters><Parameters Name="RunParams">noWebUpdate</Parameters><Parameters Name="UseLauncher">False</Parameters><Parameters Name="LoadAllSymbols">True</Parameters><Parameters Name="LoadUnspecifiedSymbols">False</Parameters></Parameters><VersionInfo><VersionInfo Name="IncludeVerInfo">True</VersionInfo><VersionInfo Name="AutoIncBuild">False</VersionInfo><VersionInfo Name="MajorVer">0</VersionInfo><VersionInfo Name="MinorVer">0</VersionInfo><VersionInfo Name="Release">0</VersionInfo><VersionInfo Name="Build">0</VersionInfo><VersionInfo Name="Debug">False</VersionInfo><VersionInfo Name="PreRelease">False</VersionInfo><VersionInfo Name="Special">False</VersionInfo><VersionInfo Name="Private">False</VersionInfo><VersionInfo Name="DLL">False</VersionInfo><VersionInfo Name="Locale">3079</VersionInfo><VersionInfo Name="CodePage">1252</VersionInfo></VersionInfo><VersionInfoKeys><VersionInfoKeys Name="CompanyName">GMS Hutter GmbH &amp; Co KG</VersionInfoKeys><VersionInfoKeys Name="FileDescription">GMS KassaServer</VersionInfoKeys><VersionInfoKeys Name="FileVersion">0.0.0.0</VersionInfoKeys><VersionInfoKeys Name="InternalName"></VersionInfoKeys><VersionInfoKeys Name="LegalCopyright">Gast Management Systeme - GMS</VersionInfoKeys><VersionInfoKeys Name="LegalTrademarks"></VersionInfoKeys><VersionInfoKeys Name="OriginalFilename"></VersionInfoKeys><VersionInfoKeys Name="ProductName">GMS KassaServer</VersionInfoKeys><VersionInfoKeys Name="ProductVersion">1.0.0.0</VersionInfoKeys><VersionInfoKeys Name="Comments"></VersionInfoKeys></VersionInfoKeys><Excluded_Packages>
+      <Excluded_Packages Name="C:\Users\Public\Documents\RAD Studio\5.0\Bpl\ComDrv32V2.bpl">Serial I/O Components</Excluded_Packages>
+      <Excluded_Packages Name="C:\Users\Public\Documents\RAD Studio\5.0\Bpl\BSFD2005.bpl">(Unbenannt)</Excluded_Packages>
+      <Excluded_Packages Name="C:\Users\Public\Documents\RAD Studio\5.0\Bpl\bsfd2009.bpl">(Unbenannt)</Excluded_Packages>
+      <Excluded_Packages Name="C:\Users\Public\Documents\RAD Studio\5.0\Bpl\bsfd2010.bpl">(Unbenannt)</Excluded_Packages>
+      <Excluded_Packages Name="C:\Users\Public\Documents\RAD Studio\5.0\Bpl\bsfd2011.bpl">(Unbenannt)</Excluded_Packages>
+      <Excluded_Packages Name="C:\Users\Public\Documents\RAD Studio\5.0\Bpl\BSFD6.bpl">BusinessSkinForm VCL</Excluded_Packages>
+      <Excluded_Packages Name="C:\Users\Public\Documents\RAD Studio\5.0\Bpl\BSFD7.bpl">(Unbenannt)</Excluded_Packages>
+    </Excluded_Packages><Source><Source Name="MainSource">kassa_sharedsourceTest.dpr</Source></Source></Delphi.Personality></BorlandProject></BorlandProject>
+  </ProjectExtensions>
+  <Import Project="$(MSBuildBinPath)\Borland.Delphi.Targets" />
+  <ItemGroup>
+    <DelphiCompile Include="kassa_sharedsourceTest.dpr">
+      <MainSource>MainSource</MainSource>
+    </DelphiCompile>
+    <DCCReference Include="..\DMBase.pas" />
+    <DCCReference Include="..\DMDesign.pas">
+      <Form>DataDesign</Form>
+      <DesignClass>TDataModule</DesignClass>
+    </DCCReference>
+    <DCCReference Include="..\DMLogging.pas">
+      <Form>DataLogging</Form>
+      <DesignClass>TDataModule</DesignClass>
+    </DCCReference>
+    <DCCReference Include="..\GlobalFunc.pas" />
+    <DCCReference Include="..\SelectDB.pas">
+      <Form>frmSelectDB</Form>
+    </DCCReference>
+    <DCCReference Include="TestDMBase.pas" />
+    <DCCReference Include="TestDMLogging.pas" />
+  </ItemGroup>
+</Project>
+
+<!-- EurekaLog First Line
+[Exception Log]
+EurekaLog Version=7001
+Activate=1
+Append to Log=1
+AutoCrashOperation=1
+boCopyLogInCaseOfError=0
+boHandleSafeCallExceptions=1
+boUseMainModuleOptions=1
+CompatibilityMode=1
+csoAllowedRenderMethods=64
+csoShowWindowsThreads=1
+DeleteMapAfterCompile=0
+dpDLLExports=0
+edoShowSendErrorReportOption=0
+edoUseRealIcon=1
+edoUseRealName=1
+Email Address="kurt.l@gms.info"
+Email Object="kassa_sharedsource UNIT-Test ERROR"
+Encrypt Password=""
+Errors Number=32
+Freeze Timeout=1
+idEurekaLog=1
+idEurekaLogDetailed=1
+idMSClassic=1
+idStepsToReproduce=1
+InjectCode=1
+InjectInfo=1
+InjectOptions=1
+loAddComputerNameInLogFileName=1
+loAddDateInLogFileName=1
+loAppendReproduceText=1
+loCatchLeaks=0
+loDeleteLogAtVersionChange=1
+loFreeAllLeaks=1
+loMaxLeaks=2048
+loNoDuplicateErrors=1
+loOnlyUnderIDE=0
+loProcessesSection=1
+loResCatchLeaks=1
+mtErrorMsgCaption="Fehler"
+mtMSDialog_DescriptionCaption="Es wird ein Fehlerbericht generiert, der uns f%U00FCr Verbesserungen hilft  %%s. Alle Daten werden geheim und \r\nvertraulich behandelt."
+mtMSDialog_ErrorMsgCaption="%%s es wurde ein Problem erkannt. Wir entschuldigen uns f%U00FCr die Umst%U00E4nde ."
+mtMSDialog_HowToReproduceCaption="Was haben Sie getan, bevor das Problem auftrat (optional)?"
+mtMSDialog_RestartCaption="Neustarten %%s"
+mtMSDialog_SeeClickCaption="hier klicken."
+mtMSDialog_SeeDetailsCaption="Inhalt des Fehlerberichtes ansehen,"
+mtMSDialog_TerminateCaption="Beenden %%s"
+mtQuestionMsgCaption="Frage"
+Output Path=".\\"
+ProjectID="{3A00EE64-D166-48B9-9511-8C947BCF69F3}"
+Sender Classes="TELMailSMTPClientSender"
+seSMTP=1
+SMTP From="eurekalog@gms.info"
+SMTP Host="mail.hutter.at"
+SMTP Password="gmsgms"
+SMTP UserID="info"
+sndAddComputerNameInFileName=1
+sndBugZillaAppendText=1
+sndBugZillaLogin=""
+sndBugZillaURL=""
+sndFogBugzAppendText=1
+sndFogBugzHost=""
+sndFogBugzLogin=""
+sndFTPLogin=""
+sndFTPURL=""
+sndHTTPURL=""
+sndJIRAAppendText=1
+sndJIRAHost=""
+sndJIRALogin=""
+sndMantisAppendText=1
+sndMantisLogin=""
+sndMantisURL=""
+sndMAPIAppendLogs=1
+sndMAPISubject="Tischreservierung ERROR"
+sndMAPITarget="kurt.l@gms.info"
+sndScreenshot=5
+sndSendEntireLog=1
+sndSendInSeparatedThread=1
+sndSendLastHTMLPage=0
+sndShellRecepient="kurt.l@gms.info"
+sndShellSubject="Tischreservierung ERROR"
+sndShowFailureMsg=1
+sndSMAPIAppendLogs=1
+sndSMAPISubject="Tischreservierung ERROR"
+sndSMAPITarget="kurt.l@gms.info"
+sndSMTPClientAppendLogs=1
+sndSMTPClientFrom="eurekalog@gms.info"
+sndSMTPClientHost="mail.hutter.at"
+sndSMTPClientLogin="info"
+sndSMTPClientPassword="gmsgms"
+sndSMTPClientSubject="kassa_sharedsource UNIT-Test ERROR"
+sndSMTPClientTarget="kurt.l@gms.info"
+sndSMTPServerAppendLogs=1
+sndSMTPServerFrom="eurekalog@gms.info"
+sndSMTPServerSubject="Tischreservierung ERROR"
+sndSMTPServerTarget="kurt.l@gms.info"
+soActCtlsControlClass=1
+soActCtlsControlText=1
+soActCtlsFormClass=1
+soActCtlsFormText=1
+soAppCompilationDate=1
+soAppName=1
+soAppParameters=1
+soAppStartDate=1
+soAppUpTime=1
+soAppVersionNumber=1
+soCmpDisplayDPI=1
+soCmpDisplayMode=1
+soCmpFreeDisk=1
+soCmpFreeMemory=1
+soCmpName=1
+soCmpPrinter=1
+soCmpProcessor=1
+soCmpSysUpTime=1
+soCmpTotalDisk=1
+soCmpTotalMemory=1
+soCmpVideoCard=1
+soCustomData=1
+soExcCount=1
+soExcDate=1
+soExcModuleName=1
+soExcModuleVersion=1
+soExcNote=1
+soExcStatus=1
+soNetDHCP=1
+soNetDNS1=1
+soNetDNS2=1
+soNetGateway=1
+soNetIP=1
+soNetSubmask=1
+soOSBuildN=1
+soOSCharset=1
+soOSLanguage=1
+soOSType=1
+soOSUpdate=1
+soUserCompany=1
+soUserID=1
+soUserPrivileges=1
+TerminateBtn Checked=0
+TerminateBtn Operation=1
+TextsCollection=""
+TrakerUser=""
+WebURL=""
+EurekaLog Last Line -->
