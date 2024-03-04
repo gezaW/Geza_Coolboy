@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{EB04BB10-98D1-4B13-8569-29E0D6A69CF9}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="rest_Felix.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\rest_Felix_Client\rest_Felix_Client.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="rest_Felix">
+        <MSBuild Projects="rest_Felix.dproj"/>
+    </Target>
+    <Target Name="rest_Felix:Clean">
+        <MSBuild Projects="rest_Felix.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="rest_Felix:Make">
+        <MSBuild Projects="rest_Felix.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="rest_Felix_Client">
+        <MSBuild Projects="..\rest_Felix_Client\rest_Felix_Client.dproj"/>
+    </Target>
+    <Target Name="rest_Felix_Client:Clean">
+        <MSBuild Projects="..\rest_Felix_Client\rest_Felix_Client.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="rest_Felix_Client:Make">
+        <MSBuild Projects="..\rest_Felix_Client\rest_Felix_Client.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="rest_Felix;rest_Felix_Client"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="rest_Felix:Clean;rest_Felix_Client:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="rest_Felix:Make;rest_Felix_Client:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
